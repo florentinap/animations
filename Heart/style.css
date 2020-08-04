@@ -1,0 +1,78 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.heart {
+	margin: auto;
+	position: relative;
+	top: 50%;
+
+	animation: rotate 3s 1s 1 linear alternate forwards;
+}
+
+.heart, .heart:before, .heart:after {
+	width: 250px;
+	height: 250px;
+}
+
+.heart:before {
+	top: -125px;
+	left: 0;
+}
+.heart:after {
+	left: -125px;
+}
+
+.heart:before, .heart:after {
+	content: "";
+	position: absolute;
+
+	animation: square-to-circle 3s 1s 1 linear alternate forwards;
+}
+
+@keyframes square-to-circle {
+	from {
+		background-color: white;
+	}
+	to {
+		background-color: red;
+	}
+
+	0% {
+		border-radius: 0 0 0 0;
+    	transform: rotate(0deg);
+	}
+	25% {
+		border-radius: 0 0 50% 0;
+		transform: rotate(90deg);
+	}
+	50% {
+		border-radius: 0 50% 50% 0;
+    	transform: rotate(180deg);
+	}
+	75% {
+		border-radius: 50% 50% 50% 0;
+    	transform: rotate(270deg);
+	}
+	100% {
+		border-radius: 50% 50% 50% 50%;
+    	transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	from {
+		background-color:white;
+	}
+	to {
+		background-color: red;
+	}
+
+	0% {
+    	transform: rotate(0deg);
+	}
+	100% {
+    	transform: rotate(45deg);
+	}
+}
