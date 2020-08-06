@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="index.js"></script>
 
 		<title>
 			Loader Feedback
@@ -8,12 +9,14 @@
 	</head>
 
 	<body>
-		<div class="circle">
-			<div class="feedback"></div>
-		</div>
+		<div class="wrapper">
+			<div class="circle">
+				<div class="feedback"></div>
+			</div>
 
-		<button @click="toggleLoading">
-			Toggle Loading
-		</button>
+			<button class="button" onclick="toggleLoading()">
+				Toggle Loading
+			</button>
+		</div>	
 	</body>		
 </html>
