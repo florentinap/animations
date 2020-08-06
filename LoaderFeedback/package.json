@@ -1,0 +1,13 @@
+{
+	"name": "loader-feedback",
+	"version": "1.0.0",
+	"author": "Florentina Petcu <florentina.ptc@gmail.com>",
+	"dependencies": {
+		"http-server": "0",
+		"postcss-cli": "6"
+	},
+	"scripts": {
+		"build:css": "postcss lib/style.css -o lib/index.css",
+		"start": "http-server lib/"
+	}
+}
