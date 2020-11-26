@@ -4,7 +4,7 @@
   "author": "Florentina Petcu <florentina.ptc@gmail.com>",
   "scripts": {
     "build:css": "postcss style.css -o index.css",
-    "clean": "rm -rf node_modules/ package-lock.json"
+    "clean": "rm -rf node_modules/ package-lock.json index.css"
   },
   "devDependencies": {
     "autoprefixer": "10",
