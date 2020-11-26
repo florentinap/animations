@@ -5,6 +5,8 @@
     --book-border: var(--book-border-margin) solid var(--book-border-color);
     --book-width: 100px;
     --book-height: 60px;
+    --animation-delay: 1s;
+    --animation-duration: 1.2s;
 }
 
     body {
@@ -13,10 +15,6 @@
     }
 
     .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         height: 100%;
         width: 100%;
 
@@ -24,9 +22,10 @@
     }
 
     .book {
-        position: relative;
-
-        border: var(--book-border);
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
 
         width: var(--book-width);
         height: var(--book-height);
@@ -37,33 +36,31 @@
         top: calc(-1 * var(--book-border-margin));
         right: calc(-1 * var(--book-border-margin));
 
-        border-top: var(--book-border);
-        border-bottom: var(--book-border);
-        border-right: var(--book-border);
+        border: var(--book-border);
 
         width: calc(var(--book-width) / 2);
         height: var(--book-height);
 
         transform-origin: 0 50%;
-        -webkit-animation: flip 1.2s infinite linear;
-                animation: flip 1.2s infinite linear;
+        -webkit-animation: flip var(--animation-duration) infinite linear;
+                animation: flip var(--animation-duration) infinite linear;
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards
     }
 
     .page:nth-child(1) {
-                -webkit-animation-delay: calc(1.4s * 1);
-                        animation-delay: calc(1.4s * 1);
+                -webkit-animation-delay: calc(var(--animation-delay) * 1);
+                        animation-delay: calc(var(--animation-delay) * 1);
             }
 
     .page:nth-child(2) {
-                -webkit-animation-delay: calc(1.4s * 2);
-                        animation-delay: calc(1.4s * 2);
+                -webkit-animation-delay: calc(var(--animation-delay) * 2);
+                        animation-delay: calc(var(--animation-delay) * 2);
             }
 
     .page:nth-child(3) {
-                -webkit-animation-delay: calc(1.4s * 3);
-                        animation-delay: calc(1.4s * 3);
+                -webkit-animation-delay: calc(var(--animation-delay) * 3);
+                        animation-delay: calc(var(--animation-delay) * 3);
             }
 
     @-webkit-keyframes flip {
@@ -73,15 +70,18 @@
 
         20% {
             background: hsl(180, 25.3968253968%, 14.7058823529%);
+            border-left-color: var(--book-color);
         }
 
         29.9% {
             background: hsl(180, 25.3968253968%, 14.7058823529%);
+            border-left-color: var(--book-color);
         }
 
         30% {
             transform: perspective(200px) rotateY(-90deg);
             background: var(--book-border);
+            border-left-color: var(--book-color);
         }
 
         54.999% {
@@ -97,9 +97,13 @@
             background: var(--book-border);
         }
 
-        100% {
+        90% {
             transform: perspective(200px) rotateY(-180deg);
             background: var(--book-border);
+        }
+
+        100% {
+            opacity: 0;
         }
     }
 
@@ -110,15 +114,18 @@
 
         20% {
             background: hsl(180, 25.3968253968%, 14.7058823529%);
+            border-left-color: var(--book-color);
         }
 
         29.9% {
             background: hsl(180, 25.3968253968%, 14.7058823529%);
+            border-left-color: var(--book-color);
         }
 
         30% {
             transform: perspective(200px) rotateY(-90deg);
             background: var(--book-border);
+            border-left-color: var(--book-color);
         }
 
         54.999% {
@@ -134,8 +141,12 @@
             background: var(--book-border);
         }
 
-        100% {
+        90% {
             transform: perspective(200px) rotateY(-180deg);
             background: var(--book-border);
+        }
+
+        100% {
+            opacity: 0;
         }
     }

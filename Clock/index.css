@@ -1,0 +1,408 @@
+:root {
+    --background-color: #634c77;
+    --clock-color: #d3d3d3;
+    --clock-size: 300px;
+    --clock-indicator-size: 10px;
+    --rotate-duration: 10s;
+    --hour-animation-duration: calc(var(--rotate-duration) / 2);
+    --hour-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--background-color);
+}
+
+.clock {
+    position: relative;
+    width: var(--clock-size);
+    height: var(--clock-size);
+
+    border-radius: 50%;
+}
+
+.indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: var(--clock-indicator-size);
+
+    background-color: var(--clock-color)
+}
+
+.indicator.rotate {
+         -webkit-animation: rotate var(--rotate-duration) infinite linear;
+                 animation: rotate var(--rotate-duration) infinite linear;
+         transform-origin: top
+    }
+
+.indicator.rotate .grow {
+            -webkit-animation: grow var(--rotate-duration) infinite linear;
+                    animation: grow var(--rotate-duration) infinite linear;
+        }
+
+.hour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: var(--hour-size);
+    height: var(--hour-size);
+
+    background-color: var(--clock-color);
+    transform-origin: bottom;
+
+    -webkit-animation: itsTime var(--hour-animation-duration) infinite linear;
+
+            animation: itsTime var(--hour-animation-duration) infinite linear
+}
+
+.hour:nth-child(1) {
+            transform: translateX(-50%) rotate(calc(1 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(1 * -30deg));
+            -webkit-animation-delay: calc(calc(1 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(1 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(2) {
+            transform: translateX(-50%) rotate(calc(2 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(2 * -30deg));
+            -webkit-animation-delay: calc(calc(2 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(2 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(3) {
+            transform: translateX(-50%) rotate(calc(3 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(3 * -30deg));
+            -webkit-animation-delay: calc(calc(3 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(3 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(4) {
+            transform: translateX(-50%) rotate(calc(4 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(4 * -30deg));
+            -webkit-animation-delay: calc(calc(4 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(4 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(5) {
+            transform: translateX(-50%) rotate(calc(5 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(5 * -30deg));
+            -webkit-animation-delay: calc(calc(5 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(5 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(6) {
+            transform: translateX(-50%) rotate(calc(6 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(6 * -30deg));
+            -webkit-animation-delay: calc(calc(6 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(6 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(7) {
+            transform: translateX(-50%) rotate(calc(7 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(7 * -30deg));
+            -webkit-animation-delay: calc(calc(7 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(7 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(8) {
+            transform: translateX(-50%) rotate(calc(8 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(8 * -30deg));
+            -webkit-animation-delay: calc(calc(8 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(8 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(9) {
+            transform: translateX(-50%) rotate(calc(9 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(9 * -30deg));
+            -webkit-animation-delay: calc(calc(9 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(9 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(10) {
+            transform: translateX(-50%) rotate(calc(10 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(10 * -30deg));
+            -webkit-animation-delay: calc(calc(10 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(10 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(11) {
+            transform: translateX(-50%) rotate(calc(11 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(11 * -30deg));
+            -webkit-animation-delay: calc(calc(11 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(11 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(12) {
+            transform: translateX(-50%) rotate(calc(12 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(12 * -30deg));
+            -webkit-animation-delay: calc(calc(12 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(12 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+.hour:nth-child(13) {
+            transform: translateX(-50%) rotate(calc(13 * 30deg)) translateY(calc(var(--clock-size) / -2)) rotate(calc(13 * -30deg));
+            -webkit-animation-delay: calc(calc(13 - 1) * var(--hour-animation-duration) / 12);
+                    animation-delay: calc(calc(13 - 1) * var(--hour-animation-duration) / 12);
+        }
+
+@-webkit-keyframes rotate {
+    0%  {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(540deg);
+    }
+    100% {
+        transform: rotate(900deg);
+    }
+}
+
+@keyframes rotate {
+    0%  {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(540deg);
+    }
+    100% {
+        transform: rotate(900deg);
+    }
+}
+
+@-webkit-keyframes grow {
+    /*0h*/
+    0%  {
+        height: calc(12 * var(--clock-indicator-size));
+    }
+    /*1h*/
+    4.16% {
+        height: calc(11 * var(--clock-indicator-size));
+    }
+    /*2h*/
+    8.33% {
+        height: calc(10 * var(--clock-indicator-size));
+    }
+    /*3h*/
+    12.5% {
+        height: calc(9 * var(--clock-indicator-size));
+    }
+    /*4h*/
+    16.66% {
+        height: calc(8 * var(--clock-indicator-size));
+    }
+    /*5h*/
+    20.83% {
+        height: calc(7 * var(--clock-indicator-size));
+    }
+    /*6h*/
+    25% {
+        height: calc(6 * var(--clock-indicator-size));
+    }
+    /*7h*/
+    29.16% {
+        height: calc(5 * var(--clock-indicator-size));
+    }
+    /*8h*/
+    33.33% {
+        height: calc(4 * var(--clock-indicator-size));
+    }
+    /*9h*/
+    37.5% {
+        height: calc(3 * var(--clock-indicator-size));
+    }
+    /*10h*/
+    41.66% {
+        height: calc(2 * var(--clock-indicator-size));
+    }
+    /*11h*/
+    48.33% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*12h*/
+    50% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*13h*/
+    54.16% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*14h*/
+    58.33% {
+        height: calc(2 * var(--clock-indicator-size));
+    }
+    /*15h*/
+    62.5% {
+        height: calc(3 * var(--clock-indicator-size));
+    }
+    /*16h*/
+    66.66% {
+        height: calc(4 * var(--clock-indicator-size));
+    }
+    /*17h*/
+    70.83% {
+        height: calc(5 * var(--clock-indicator-size));
+    }
+    /*18h*/
+    75% {
+        height: calc(6 * var(--clock-indicator-size));
+    }
+    /*19h*/
+    79.16% {
+        height: calc(7 * var(--clock-indicator-size));
+    }
+    /*20h*/
+    83.33% {
+        height: calc(8 * var(--clock-indicator-size));
+    }
+    /*21h*/
+    87.5% {
+        height: calc(9 * var(--clock-indicator-size));
+    }
+    /*22h*/
+    91.66% {
+        height: calc(10 * var(--clock-indicator-size));
+    }
+    /*23h*/
+    95.83% {
+        height: calc(11 * var(--clock-indicator-size));
+    }
+    /*24h*/
+    100% {
+        height: calc(12 * var(--clock-indicator-size));
+    }
+}
+
+@keyframes grow {
+    /*0h*/
+    0%  {
+        height: calc(12 * var(--clock-indicator-size));
+    }
+    /*1h*/
+    4.16% {
+        height: calc(11 * var(--clock-indicator-size));
+    }
+    /*2h*/
+    8.33% {
+        height: calc(10 * var(--clock-indicator-size));
+    }
+    /*3h*/
+    12.5% {
+        height: calc(9 * var(--clock-indicator-size));
+    }
+    /*4h*/
+    16.66% {
+        height: calc(8 * var(--clock-indicator-size));
+    }
+    /*5h*/
+    20.83% {
+        height: calc(7 * var(--clock-indicator-size));
+    }
+    /*6h*/
+    25% {
+        height: calc(6 * var(--clock-indicator-size));
+    }
+    /*7h*/
+    29.16% {
+        height: calc(5 * var(--clock-indicator-size));
+    }
+    /*8h*/
+    33.33% {
+        height: calc(4 * var(--clock-indicator-size));
+    }
+    /*9h*/
+    37.5% {
+        height: calc(3 * var(--clock-indicator-size));
+    }
+    /*10h*/
+    41.66% {
+        height: calc(2 * var(--clock-indicator-size));
+    }
+    /*11h*/
+    48.33% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*12h*/
+    50% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*13h*/
+    54.16% {
+        height: calc(1 * var(--clock-indicator-size));
+    }
+    /*14h*/
+    58.33% {
+        height: calc(2 * var(--clock-indicator-size));
+    }
+    /*15h*/
+    62.5% {
+        height: calc(3 * var(--clock-indicator-size));
+    }
+    /*16h*/
+    66.66% {
+        height: calc(4 * var(--clock-indicator-size));
+    }
+    /*17h*/
+    70.83% {
+        height: calc(5 * var(--clock-indicator-size));
+    }
+    /*18h*/
+    75% {
+        height: calc(6 * var(--clock-indicator-size));
+    }
+    /*19h*/
+    79.16% {
+        height: calc(7 * var(--clock-indicator-size));
+    }
+    /*20h*/
+    83.33% {
+        height: calc(8 * var(--clock-indicator-size));
+    }
+    /*21h*/
+    87.5% {
+        height: calc(9 * var(--clock-indicator-size));
+    }
+    /*22h*/
+    91.66% {
+        height: calc(10 * var(--clock-indicator-size));
+    }
+    /*23h*/
+    95.83% {
+        height: calc(11 * var(--clock-indicator-size));
+    }
+    /*24h*/
+    100% {
+        height: calc(12 * var(--clock-indicator-size));
+    }
+}
+
+@-webkit-keyframes itsTime {
+    0% {
+        opacity: 1;
+    }
+    12.5% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes itsTime {
+    0% {
+        opacity: 1;
+    }
+    12.5% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

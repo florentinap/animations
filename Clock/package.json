@@ -1,0 +1,17 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "author": "Florentina Petcu <florentina.ptc@gmail.com>",
+  "scripts": {
+    "build:css": "postcss style.css -o index.css",
+    "clean": "rm -rf node_modules/ package-lock.json"
+  },
+  "devDependencies": {
+    "autoprefixer": "10",
+    "postcss": "8",
+    "postcss-cli": "8",
+    "postcss-color-mod-function": "3",
+    "postcss-for": "2",
+    "postcss-preset-env": "6"
+  }
+}
